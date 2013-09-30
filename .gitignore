@@ -1,0 +1,37 @@
+# FireShell
+# http://getfireshell.com
+# @author Todd Motto
+
+# ----------------------------- misc
+.DS_Store
+.tmp
+.sass-cache
+composer.phar
+composer.lock
+npm-debug.log
+BACKUP_*
+# ----------------------------- compiled
+bootstrap/compiled.php
+# ----------------------------- cli
+node_modules
+.DS_Store
+.tmp
+.sass-cache
+# ----------------------------- deps
+src/components
+
+src/scripts/vendor
+src/scripts/libraries
+src/scripts/modules
+src/scripts/uiux
+src/scripts/vendor
+src/vendor
+
+dist/images
+dist/scripts
+dist/styles
+dist/app.css
+dist/fonts.css
+dist/ie.css
+dist/print.css
+dist/screen.css

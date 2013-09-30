@@ -1,0 +1,6 @@
+{
+
+	"vendor": {
+		"js": "src/vendor/requirejs/require.js"
+	}
+}

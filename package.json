@@ -1,0 +1,49 @@
+{
+  "name": "project",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+
+  },
+
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
+  },
+
+  "devDependencies": {
+    "bower":						"~1.2.6",
+	"grunt": 						"~0.4.1",
+	"grunt-contrib-clean":			"~0.4.1",
+	"grunt-contrib-compass": 		"~0.3.0",
+	"grunt-contrib-concat": 		"~0.3.0",
+    "grunt-contrib-connect":		"~0.3.0",
+	"grunt-contrib-copy":			"~0.4.1",
+	"grunt-contrib-cssmin": 		"~0.4.1",
+	"grunt-contrib-imagemin":		"~0.1.4",
+	"grunt-contrib-jshint":			"~0.1.1",
+	"grunt-contrib-requirejs": 		"~0.4.1",
+	"grunt-contrib-sass": 			"~0.4.1",
+	"grunt-contrib-uglify": 		"~0.2.2",
+	"grunt-contrib-watch": 			"~0.4.4",
+
+    "grunt-autoprefixer":			"~0.3.0",
+    "grunt-bower":					"~0.6.1",
+	"grunt-bower-task":				"~0.3.1",
+	"grunt-cache-breaker" : 		"*",
+    "grunt-open":					"~0.2.0",
+	"grunt-remove-logging": 		"~0.1.1",
+	"grunt-shell":					"~0.3.1",
+
+	"connect-livereload":			"~0.2.0",
+	"glob":							"*",
+	"matchdep":						"*",
+	"minimatch":					"*"
+
+  },
+
+  "scripts": {
+    "postinstall" : "node_modules/.bin/bower install"
+  }
+
+}

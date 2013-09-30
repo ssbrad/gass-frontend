@@ -1,0 +1,44 @@
+{
+
+	"name":		"Project Name",
+	"version": "0.0.1",
+
+	"bullet1": "",
+	"bullet2": "",
+	"bullet3": "",
+
+	"domain": {
+		"dev": 	"companysite.local",
+		"prod":	"companysite.com"
+	},
+
+	"client": {
+		"company": "Company, LLC",
+		"website": "companysite.com"
+	},
+
+	"src":		{
+		"sass":			"src/sass",
+		"js":			"src/scripts/",
+		"img":			"src/images",
+		"fonts":		"src/sass/fonts",
+		"vendor":		"src/vendor"
+	},
+
+	"dist":		{
+		"css":			"dist/styles",
+		"js":			"dist/scripts",
+		"img":			"dist/images",
+		"fonts":		"dist/styles/fonts"
+	},
+
+	"lar":		{
+		"app":			"app",
+		"models":		"app/models",
+		"views":		"app/views",
+		"controllers":	"app/controllers",
+		"config":		"app/config"
+	}
+
+
+}

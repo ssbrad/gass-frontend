@@ -1,0 +1,77 @@
+
+/*
+| BASE PLUGINS
+|-----------------------------------*/
+"foundation": "*",
+"foundation3": "https://github.com/zurb/foundation.git#v3.2.5",
+
+"jquery": "*",
+"requirejs": "*",
+"requirejs-domready": "*",
+"requirejs-text": "*",
+"modernizr": "*",
+"normalize-css": "*",
+
+
+/*
+| LAYOUT PLUGINS
+|-----------------------------------*/
+"equalize": "*",
+"isotope": "*",
+
+
+/*
+| IMAGE PLUGINS
+|-----------------------------------*/
+"picturefill": "*",
+"imagesloaded": "*",
+
+
+/*
+| PERFORMANCE PLUGINS
+|-----------------------------------*/
+"jquery-backstretch": "*",
+"jquery.scrollTo": "*",
+"jquery-throttle-debounce": "*",
+"jquery-smartresize": "git://github.com/louisremi/jquery-smartresize.git",
+"jResize": "git://github.com/toddmotto/jResize.git"
+
+
+/*
+| MODALS, LIGHTBOXES PLUGINS
+|-----------------------------------*/
+"magnific-popup": "*",
+
+
+/*
+| SLIDERS
+|-----------------------------------*/
+"caroufredsel": "http://gashouse.com/repo/carouFredSel.zip",
+
+
+/*
+| TEXT PLUGINS
+|-----------------------------------*/
+"FitText.js": "git://github.com/davatron5000/FitText.js.git",
+
+
+
+
+//| BUTTONS PLUGINS
+//|-----------------------------------
+"jquery-bbq": "https://github.com/cowboy/jquery-bbq.git",
+
+/*
+| VIDEO PLUGINS
+|-----------------------------------*/
+"video.js": "*",
+
+
+
+"sticky-kit": "*",
+"jquery.transit": "*",
+"jquery-mousewheel": "*",
+"qtip2": "*",
+"jquery-timeago": "*",
+"jquery-touchswipe": "*",
+" jquery-easing": "*",

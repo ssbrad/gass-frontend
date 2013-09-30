@@ -1,0 +1,162 @@
+// Global Foundation Settings
+
+// @import "foundation";
+
+	@import "partials/layout";
+//|---------------------------------------------------------------------------------------
+//| Requires:
+//|----------
+// @import "foundation/components/global"; // *always required
+// @import "foundation/components/grid";
+// @import "foundation/components/grid-5";
+// @import "foundation/components/visibility";
+// @import "foundation/components/block-grid";
+
+
+@import "partials/typography";
+//|---------------------------------------------------------------------------------------
+//| Requires:
+//|----------
+// @import "foundation/components/type";
+
+
+@import "partials/buttons";
+//|---------------------------------------------------------------------------------------
+//| Requires:
+//|----------
+// @import "foundation/components/buttons";
+// @import "foundation/components/button-groups"; // *requires components/buttons
+// @import "foundation/components/dropdown-buttons"; // *requires components/buttons
+// @import "foundation/components/split-buttons"; // *requires components/buttons
+
+
+@import "partials/forms";
+//|---------------------------------------------------------------------------------------
+//| Requires:
+//|----------
+// @import "foundation/components/forms"; // *requires components/buttons
+// @import "foundation/components/custom-forms"; // *requires components/buttons, components/forms
+
+
+@import "partials/video";
+//|---------------------------------------------------------------------------------------
+//| Requires:
+//|----------
+// @import "foundation/components/flex-video";
+
+
+@import "partials/sections";
+//|---------------------------------------------------------------------------------------
+//| Requires:
+//|----------
+// @import "foundation/components/section";
+
+
+@import "partials/navigation-topbar";
+//|---------------------------------------------------------------------------------------
+//| Requires:
+//|----------
+// @import "foundation/components/top-bar";  // *requires components/grid
+
+
+@import "partials/alerts";
+//|---------------------------------------------------------------------------------------
+//| Requires:
+//|----------
+// @import "foundation/components/alert-boxes";
+
+
+@import "partials/breadcrumbs";
+//|---------------------------------------------------------------------------------------
+//| Requires:
+//|----------
+// @import "foundation/components/breadcrumbs";
+
+
+@import "partials/keystrokes";
+//|---------------------------------------------------------------------------------------
+//| Requires:
+//|----------
+// @import "foundation/components/keystrokes";
+
+
+@import "partials/labels";
+//|---------------------------------------------------------------------------------------
+//| Requires:
+//|----------
+// @import "foundation/components/labels";
+
+
+@import "partials/lists";
+//|---------------------------------------------------------------------------------------
+//| Requires:
+//|----------
+// @import "foundation/components/inline-lists";
+
+
+@import "partials/pagination";
+//|---------------------------------------------------------------------------------------
+//| Requires:
+//|----------
+// @import "foundation/components/pagination";
+
+
+@import "partials/panels";
+//|---------------------------------------------------------------------------------------
+//| Requires:
+//|----------
+// @import "foundation/components/panels";
+
+@import "partials/pricing-tables";
+//|---------------------------------------------------------------------------------------
+//| Requires:
+//|----------
+// @import "foundation/components/pricing-tables";
+
+@import "partials/progress-bars";
+//|---------------------------------------------------------------------------------------
+//| Requires:
+//|----------
+// @import "foundation/components/progress-bars";
+
+@import "partials/navigation-side";
+//|---------------------------------------------------------------------------------------
+//| Requires:
+//|----------
+// @import "foundation/components/side-nav";
+
+@import "partials/navigation-sub";
+//|---------------------------------------------------------------------------------------
+//| Requires:
+//|----------
+// @import "foundation/components/sub-nav";
+
+@import "partials/switch";
+//|---------------------------------------------------------------------------------------
+//| Requires:
+//|----------
+// @import "foundation/components/switch";
+
+@import "partials/tables";
+//|---------------------------------------------------------------------------------------
+//| Requires:
+//|----------
+// @import "foundation/components/tables";
+
+@import "partials/thumbs";
+//|---------------------------------------------------------------------------------------
+//| Requires:
+//|----------
+// @import "foundation/components/thumbs";
+
+@import "partials/tooltips";
+//|---------------------------------------------------------------------------------------
+//| Requires:
+//|----------
+// @import "foundation/components/tooltips";
+
+@import "partials/dropdown";
+//|---------------------------------------------------------------------------------------
+//| Requires:
+//|----------
+// @import "foundation/components/dropdown";

@@ -1,0 +1,34 @@
+{
+	"name": "SS Bower",
+	"description": "Bower Boilerplate",
+	"version": "1.0.0",
+
+	"dependencies": {
+
+		"normalize-css": "*",
+		"foundation": "*",
+		"foundation3": "https://github.com/zurb/foundation.git#v3.2.5",
+		"jquery": "*",
+		"requirejs": "*",
+		"requirejs-domready": "*",
+		"requirejs-text": "*",
+
+		"jquery-throttle-debounce": "*",
+		"jquery-smartresize": "git://github.com/louisremi/jquery-smartresize.git",
+
+
+		"equalize": "*",
+
+
+		"caroufredsel": "http://gashouse.com/repo/carouFredSel.zip",
+		"picturefill": "*",
+		"jquery-backstretch": "*",
+		"imagesloaded": "*",
+
+
+		"FitText.js": "git://github.com/davatron5000/FitText.js.git",
+		"video.js": "*",
+		"sticky-kit": "*"
+
+	}
+}

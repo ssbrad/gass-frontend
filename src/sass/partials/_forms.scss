@@ -1,0 +1,708 @@
+//|------------------------------------------------------------------------------------------------------------------------------
+//| VARIABLES
+//|------------------------------------------------------------------------------------------------------------------------------
+
+$include-html-form-classes: $include-html-classes;
+
+// We use this to set the base for lots of form spacing and positioning styles
+$form-spacing: em-calc(16);
+
+// We use these to style the labels in different ways
+$form-label-pointer: pointer;
+$form-label-font-size: em-calc(14);
+$form-label-font-weight: 500;
+$form-label-font-color: lighten(#000, 30%);
+$form-label-bottom-margin: em-calc(3);
+$input-font-family: inherit;
+$input-font-color: rgba(0,0,0,0.75);
+$input-font-size: em-calc(14);
+$input-bg-color: #fff;
+$input-focus-bg-color: darken(#fff, 2%);
+$input-border-color: darken(#fff, 20%);
+$input-focus-border-color: darken(#fff, 40%);
+$input-border-style: solid;
+$input-border-width: 1px;
+$input-disabled-bg: #ddd;
+$input-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+$input-include-glowing-effect: true;
+
+// We use these to style the fieldset border and spacing.
+$fieldset-border-style: solid;
+$fieldset-border-width: 1px;
+$fieldset-border-color: #ddd;
+$fieldset-padding: em-calc(20);
+$fieldset-margin: em-calc(18 0);
+
+// We use these to style the legends when you use them
+$legend-bg: #fff;
+$legend-font-weight: bold;
+$legend-padding: em-calc(0 3);
+
+// We use these to style the prefix and postfix input elements
+$input-prefix-bg: darken(#fff, 5%);
+$input-prefix-border-color: darken(#fff, 20%);
+$input-prefix-border-size: 1px;
+$input-prefix-border-type: solid;
+$input-prefix-overflow: hidden;
+$input-prefix-font-color: #333;
+$input-prefix-font-color-alt: #fff;
+
+// We use these to style the error states for inputs and labels
+$input-error-message-padding: em-calc(6 4);
+$input-error-message-top: 0;
+$input-error-message-font-size: em-calc(12);
+$input-error-message-font-weight: bold;
+$input-error-message-font-color: #fff;
+$input-error-message-font-color-alt: #333;
+
+// We use this to style the glowing effect of inputs when focused
+$glowing-effect-fade-time: 0.45s;
+$glowing-effect-color: $input-focus-border-color;
+
+
+
+//
+// Custom Form Variables
+//
+$include-html-custom-form-classes: $include-html-classes;
+
+// We use these to control the basic form styles input styles
+$custom-form-border-color: #ccc;
+$custom-form-border-size: 1px;
+$custom-form-bg: #fff;
+$custom-form-bg-disabled: #ddd;
+$custom-form-input-size: 16px;
+$custom-form-check-color: #222;
+$custom-form-check-size: 16px;
+$custom-form-radio-size: 8px;
+$custom-form-checkbox-radius: 0;
+
+// We use these to style the custom select form element.
+$custom-select-bg: #fff;
+$custom-select-fade-to-color: #f3f3f3;
+$custom-select-border-color: #ddd;
+$custom-select-triangle-color: #aaa;
+$custom-select-triangle-color-open: #222;
+$custom-select-height: em-calc(13) + ($form-spacing * 1.5);
+$custom-select-margin-bottom: em-calc(20);
+$custom-select-font-color-selected: #141414;
+$custom-select-disabled-color: #888;
+
+// We use these to control the style of the custom select dropdown element.
+$custom-dropdown-height: 200px;
+$custom-dropdown-bg: #fff;
+$custom-dropdown-border-color: darken(#fff, 20%);
+$custom-dropdown-border-width: 1px;
+$custom-dropdown-border-style: solid;
+$custom-dropdown-font-color: #555;
+$custom-dropdown-font-size: em-calc(14);
+$custom-dropdown-color-selected: #eeeeee;
+$custom-dropdown-font-color-selected: #000;
+$custom-dropdown-shadow: 0 2px 2px 0 rgba(0,0,0,0.1);
+$custom-dropdown-offset-top: auto;
+$custom-dropdown-list-padding: em-calc(4);
+$custom-dropdown-default-float-padding: em-calc(6);
+$custom-dropdown-opposite-padding: em-calc(38);
+$custom-dropdown-list-item-min-height: em-calc(24);
+$custom-dropdown-width-small: 134px;
+$custom-dropdown-width-medium: 254px;
+$custom-dropdown-width-large: 434px;
+
+
+
+
+/*-------------------------------------------------------|  DO NO MOVE  |-------------------------------------------------------*/
+
+@import "foundation/components/forms"; // *requires components/buttons
+@import "foundation/components/custom-forms"; // *requires components/buttons, components/forms
+
+/*-------------------------------------------------------|  DO NO MOVE  |-------------------------------------------------------*/
+
+
+
+
+
+//|------------------------------------------------------------------------------------------------------------------------------
+//| MIXINS
+//|------------------------------------------------------------------------------------------------------------------------------
+
+// // We use this mixin to give us form styles for rows inside of forms
+// @mixin form-row-base {
+//   .row { margin: 0 ((-$form-spacing) / 2);
+
+//     .column,
+//     .columns { padding: 0 $form-spacing / 2; }
+
+//     // Use this to collapse the margins of a form row
+//     &.collapse { margin: 0;
+
+//       .column,
+//       .columns { padding: 0; }
+//       input {
+//         -moz-border-radius-bottom#{$opposite-direction}: 0;
+//         -moz-border-radius-top#{$opposite-direction}: 0;
+//         -webkit-border-bottom-#{$opposite-direction}-radius: 0;
+//         -webkit-border-top-#{$opposite-direction}-radius: 0;
+//       }
+
+//     }
+//   }
+//   input.column,
+//   input.columns,
+//   textarea.column,
+//   textarea.columns { padding-#{$default-float}: $form-spacing / 2; }
+// }
+
+// // We use this mixin to give all basic form elements their style
+// @mixin form-element() {
+//   background-color: $input-bg-color;
+//   font-family: $input-font-family;
+//   border: $input-border-width $input-border-style $input-border-color;
+//   @if $experimental {
+//     -webkit-box-shadow: $input-box-shadow;
+//   }
+//   box-shadow: $input-box-shadow;
+//   color: $input-font-color;
+//   display: block;
+//   font-size: $input-font-size;
+//   margin: 0 0 $form-spacing 0;
+//   padding: $form-spacing / 2;
+//   height: ($input-font-size + ($form-spacing * 1.5) - em-calc(1));
+//   width: 100%;
+//   @include box-sizing(border-box);
+//   @if $input-include-glowing-effect {
+//       @include block-glowing-effect(focus, $glowing-effect-fade-time, $glowing-effect-color);
+//   }
+//   // Basic focus styles
+//   &:focus {
+//     background: $input-focus-bg-color;
+//     border-color: $input-focus-border-color;
+//     outline: none;
+//   }
+
+//   // Disabled background input background color
+//   &[disabled] { background-color: $input-disabled-bg; }
+// }
+
+// // We use this mixin to create form labels
+// @mixin form-label($alignment:false, $base-style:true) {
+
+//   // Control whether or not the base styles come through.
+//   @if $base-style {
+//     font-size: $form-label-font-size;
+//     color: $form-label-font-color;
+//     cursor: $form-label-pointer;
+//     display: block;
+//     font-weight: $form-label-font-weight;
+//     margin-bottom: $form-label-bottom-margin;
+//   }
+
+//   // Alignment options
+//   @if $alignment == right {
+//     float: none;
+//     text-align: right;
+//   }
+//   @else if $alignment == inline {
+//     margin: 0 0 $form-spacing 0;
+//     padding: $form-spacing / 2 + em-calc($input-border-width * 2) 0;
+//   }
+// }
+
+// // We use this mixin to create postfix/prefix form Labels
+// @mixin prefix-postfix-base {
+//   display: block;
+//   position: relative;
+//   z-index: 2;
+//   text-align: center;
+//   width: 100%;
+//   padding-top: 0;
+//   padding-bottom: 0;
+//   border-style: $input-prefix-border-type;
+//   border-width: $input-prefix-border-size;
+//   overflow: $input-prefix-overflow;
+//   font-size: $form-label-font-size;
+//   height: ($form-label-font-size + ($form-spacing * 1.5) - em-calc(1));
+//   line-height: ($form-label-font-size + ($form-spacing * 1.5) - em-calc(1));
+// }
+
+// // We use this mixin to create prefix label styles
+// @mixin prefix($bg:$input-prefix-bg,$is-button:false) {
+
+//   @if $bg {
+//     $bg-lightness: lightness($bg);
+//     background: $bg;
+//     border-color: darken($bg, 10%);
+//     border-#{$opposite-direction}: none;
+
+//     // Control the font color based on background brightness
+//     @if $bg-lightness > 70% or $bg == yellow { color: $input-prefix-font-color; }
+//     @else { color: $input-prefix-font-color-alt; }
+//   }
+
+//   @if $is-button {
+//     padding-#{$default-float}: 0;
+//     padding-#{$opposite-direction}: 0;
+//     padding-top: 0;
+//     padding-bottom: 0;
+//     text-align: center;
+//     line-height: em-calc(34);
+//   }
+
+// }
+
+// // We use this mixin to create postfix label styles
+// @mixin postfix($bg:$input-prefix-bg, $is-button:false) {
+
+//   @if $bg {
+//     $bg-lightness: lightness($bg);
+//     background: $bg;
+//     border-color: darken($bg, 15%);
+//     border-#{$default-float}: none;
+
+//     // Control the font color based on background brightness
+//     @if $bg-lightness > 70%  or $bg == yellow { color: $input-prefix-font-color; }
+//     @else { color: $input-prefix-font-color-alt; }
+//   }
+
+//   @if $is-button {
+//     padding-#{$default-float}: 0;
+//     padding-#{$opposite-direction}: 0;
+//     padding-top: 0;
+//     padding-bottom: 0;
+//     text-align: center;
+//     line-height: em-calc(34);
+//   }
+
+// }
+
+// // We use this mixin to style fieldsets
+// @mixin fieldset {
+//   border: $fieldset-border-style $fieldset-border-width $fieldset-border-color;
+//   padding: $fieldset-padding;
+//   margin: $fieldset-margin;
+
+//   // and legend styles
+//   legend {
+//     font-weight: $legend-font-weight;
+//     background: $legend-bg;
+//     padding: $legend-padding;
+//     margin: 0;
+//     margin-#{$default-float}: em-calc(-3);
+//   }
+// }
+
+// // We use this mixin to control border and background color of error inputs
+// @mixin form-error-color($color:$alert-color) {
+//   border-color: $color;
+//   background-color: rgba($color, 0.1);
+
+//   // Go back to normal on focus
+//   &:focus {
+//     background: $input-focus-bg-color;
+//     border-color: $input-focus-border-color;
+//   }
+// }
+
+// // We use this simple mixin to style labels for error inputs
+// @mixin form-label-error-color($color:$alert-color) { color: $color; }
+
+// // We use this mixin to create error message styles
+// @mixin form-error-message($bg:$alert-color) {
+//   display: block;
+//   padding: $input-error-message-padding;
+//   margin-top: $input-error-message-top;
+//   margin-bottom: $form-spacing;
+//   font-size: $input-error-message-font-size;
+//   font-weight: $input-error-message-font-weight;
+
+//   // We can control the text color based on the brightness of the background.
+//   $bg-lightness: lightness($bg);
+//   background: $bg;
+//   @if $bg-lightness < 70% or $bg == yellow { color: $input-error-message-font-color; }
+//   @else { color: $input-error-message-font-color-alt; }
+// }
+
+// // Only include these classes if the variable is true, otherwise they'll be left out.
+// @if $include-html-form-classes != false {
+//   /* Standard Forms */
+//   form { margin: 0 0 $form-spacing; }
+
+//   /* Using forms within rows, we need to set some defaults */
+//   form .row { @include form-row-base; }
+
+//   /* Label Styles */
+//   label { @include form-label;
+//     &.right { @include form-label(right,false); }
+//     &.inline { @include form-label(inline,false); }
+//     /* Styles for required inputs */
+//     small {
+//       text-transform: capitalize;
+//       color: lighten($form-label-font-color, 10%);
+//     }
+//   }
+
+//   /* Attach elements to the beginning or end of an input */
+//   .prefix,
+//   .postfix { @include prefix-postfix-base; }
+
+//   /* Adjust padding, alignment and radius if pre/post element is a button */
+//   .postfix.button { @include button-size(false,false,false); @include postfix(false,true); }
+//   .prefix.button { @include button-size(false,false,false); @include prefix(false,true); }
+
+//   .prefix.button.radius { @include radius(0); @include side-radius(left, $button-radius); }
+//   .postfix.button.radius { @include radius(0); @include side-radius(right, $button-radius); }
+//   .prefix.button.round { @include radius(0); @include side-radius(left, $button-round); }
+//   .postfix.button.round { @include radius(0); @include side-radius(right, $button-round); }
+
+//   /* Separate prefix and postfix styles when on span or label so buttons keep their own */
+//   span.prefix,label.prefix { @include prefix();
+//     &.radius { @include radius(0); @include side-radius(left, $global-radius); }
+//   }
+//   span.postfix,label.postfix { @include postfix();
+//     &.radius { @include radius(0); @include side-radius(right, $global-radius); }
+//   }
+
+//   /* Input groups will automatically style first and last elements of the group */
+//   .input-group {
+//     &.radius {
+//       &>*:first-child,  &>*:first-child * {
+//         @include side-radius($default-float, $global-radius);
+//       }
+//       &>*:last-child, &>*:last-child * {
+//         @include side-radius($opposite-direction, $global-radius);
+//       }
+//     }
+//     &.round {
+//       &>*:first-child,  &>*:first-child * {
+//         @include side-radius($default-float, $button-round);
+//       }
+//       &>*:last-child, &>*:last-child * {
+//         @include side-radius($opposite-direction, $button-round);
+//       }
+//     }
+//   }
+
+//   /* We use this to get basic styling on all basic form elements */
+//   input[type="text"],
+//   input[type="password"],
+//   input[type="date"],
+//   input[type="datetime"],
+//   input[type="datetime-local"],
+//   input[type="month"],
+//   input[type="week"],
+//   input[type="email"],
+//   input[type="number"],
+//   input[type="search"],
+//   input[type="tel"],
+//   input[type="time"],
+//   input[type="url"],
+//   textarea {
+//     -webkit-appearance: none;
+//     -webkit-border-radius: 0;
+//     border-radius: 0;
+//     @include form-element;
+//     @if not $input-include-glowing-effect {
+//         @include single-transition(all, 0.15s, linear);
+//     }
+//   }
+
+//   /* Adjust margin for form elements below */
+//   input[type="file"],
+//   input[type="checkbox"],
+//   input[type="radio"],
+//   select {
+//     margin: 0 0 $form-spacing 0;
+//   }
+
+//   /* Normalize file input width */
+//   input[type="file"] {
+//     width:100%;
+//   }
+
+//   /* We add basic fieldset styling */
+//   fieldset {
+//     @include fieldset;
+//   }
+
+//   /* Error Handling */
+
+//   [data-abide] {
+//     .error small.error, span.error, small.error {
+//       @include form-error-message;
+//     }
+//     span.error, small.error { display: none; }
+//   }
+//   span.error, small.error {
+//     @include form-error-message;
+//   }
+//   .error {
+//     input,
+//     textarea,
+//     select {
+//       @include form-error-color;
+//       margin-bottom: 0;
+//     }
+
+//     label,
+//     label.error {
+//       @include form-label-error-color;
+//     }
+
+//     > small,
+//     small.error {
+//       @include form-error-message;
+//     }
+
+//     span.error-message {
+//       display: block;
+//     }
+//   }
+
+//   input.error,
+//   textarea.error {
+//     @include form-error-color;
+//     margin-bottom: 0;
+//   }
+
+//   .error select {
+//     @include form-error-color;
+//   }
+
+//   label.error { @include form-label-error-color; }
+
+// }
+
+
+
+// // We decided not to make a mixin for the custom forms because
+// // they rely on a very specific class naming structure.
+// // We may look at updating this in the future.
+// @mixin custom-form-input($radius:0px, $mark-size:0px) {
+//   @include radius($radius);
+//   $custom-form-input-padding: (($custom-form-input-size - $mark-size) / 2) - $custom-form-border-size;
+//   @if $custom-form-input-padding >= 0 {
+//     padding: $custom-form-input-padding;
+//   } @else {
+//     padding: 0;
+//   }
+// }
+
+// // Only include these classes if the variable is true, otherwise they'll be left out.
+// @if $include-html-custom-form-classes != false {
+
+//   /* Custom Checkbox and Radio Inputs */
+//   form.custom {
+
+//     .hidden-field {
+//       margin-#{$default-float}: -99999px;
+//       position: absolute;
+//       visibility: hidden;
+//     }
+
+//     .custom {
+//       display: inline-block;
+//       width: $custom-form-input-size;
+//       height: $custom-form-input-size;
+//       position: relative;
+//       top:-1px; /* fix centering issue */
+//       vertical-align: middle;
+//       border: solid $custom-form-border-size $custom-form-border-color;
+//       background: $custom-form-bg;
+
+//       &.checkbox {
+//         @include custom-form-input($radius:$custom-form-checkbox-radius, $mark-size:$custom-form-check-size);
+//       }
+
+//       &.radio {
+//         @include custom-form-input($radius:1000px, $mark-size:$custom-form-radio-size);
+//       }
+
+//       &.checkbox {
+//         &:before {
+//           content: "";
+//           display: block;
+//           font-size: $custom-form-check-size;
+//           color: $custom-form-bg;
+//         }
+//       }
+
+//       &.radio.checked {
+//         &:before {
+//           content: "";
+//           display: block;
+//           width: $custom-form-radio-size;
+//           height: $custom-form-radio-size;
+//           @include radius(1000px);
+//           background: $custom-form-check-color;
+//           position: relative;
+//         }
+//       }
+
+//       &.checkbox.checked {
+//         &:before {
+//           content: "\00d7";
+//           color: $custom-form-check-color;
+//           position: absolute;
+//           top: -50%;
+//           left: 50%;
+//           margin-top: 4px;
+//           margin-left: -5px;
+//         }
+//       }
+//     }
+//   }
+
+//   /* Custom Select Options and Dropdowns */
+//   form.custom {
+//     .custom.dropdown {
+//       display: block;
+//       position: relative;
+//       top: 0;
+//       height: $custom-select-height;
+//       margin-bottom: $custom-select-margin-bottom;
+//       margin-top: 0;
+//       padding: 0;
+//       width: 100%;
+//       background: $custom-dropdown-bg;
+//       @if $experimental {
+//         background: -moz-linear-gradient(top, $custom-dropdown-bg 0%, $custom-select-fade-to-color 100%);
+//         background: -webkit-linear-gradient(top, $custom-dropdown-bg 0%,$custom-select-fade-to-color 100%);
+//         -webkit-box-shadow: none;
+//       }
+//       background: linear-gradient(to bottom, $custom-dropdown-bg 0%,$custom-select-fade-to-color 100%);
+//       box-shadow: none;
+//       font-size: $custom-dropdown-font-size;
+//       vertical-align: top;
+
+//       ul {
+//         overflow-y: auto;
+//         max-height: $custom-dropdown-height;
+//       }
+
+//       .current {
+//         cursor:default;
+//         white-space: nowrap;
+//         line-height: $custom-select-height - em-calc(1);
+//         color: $input-font-color;
+//         text-decoration: none;
+//         overflow: hidden;
+//         display: block;
+//         margin-#{$default-float}: $form-spacing / 2;
+//         margin-#{$opposite-direction}: $custom-select-height;
+//       }
+
+//       .selector {
+//         cursor:default;
+//         position: absolute;
+//         width: $form-spacing * 2.5;
+//         height: $custom-select-height;
+//         display: block;
+//         #{$opposite-direction}: 0;
+//         top: 0;
+//         &:after {
+//           content: "";
+//           display: block;
+//           @include css-triangle(5px, $custom-select-triangle-color, top);
+//           position: absolute;
+//           #{$default-float}: ($form-spacing * 2.5) / 2 - em-calc(5);
+//           top: 50%;
+//           margin-top: -3px;
+//         }
+//       }
+
+//       &:hover, &.open {
+//         a.selector {
+//           &:after { @include css-triangle(5px, $custom-select-triangle-color-open, top); }
+//         }
+//       }
+
+//       .disabled {
+//         color: $custom-select-disabled-color;
+//         &:hover {
+//           background: transparent;
+//           color: $custom-select-disabled-color;
+//           &:after { display: none; }
+//         }
+//       }
+
+//       &.open ul {
+//         display: block;
+//         z-index: 10;
+//         min-width:100%;
+//         @include box-sizing(content-box);
+//       }
+
+//       &.small { max-width: $custom-dropdown-width-small; }
+//       &.medium { max-width: $custom-dropdown-width-medium; }
+//       &.large { max-width: $custom-dropdown-width-large; }
+//       &.expand { width: 100% !important; }
+
+//       &.open.small ul { min-width: $custom-dropdown-width-small; @include box-sizing(border-box); }
+//       &.open.medium ul { min-width: $custom-dropdown-width-medium; @include box-sizing(border-box); }
+//       &.open.large ul { min-width: $custom-dropdown-width-large; @include box-sizing(border-box); }
+//     }
+
+//     .error .custom.dropdown {
+//       @include form-error-color;
+//       background: rgba($alert-color, 0.1);
+//       margin-bottom: 0;
+//     }
+
+//     .error .custom.dropdown + small.error {
+//       margin-top: 0;
+//     }
+
+//     .custom.dropdown ul {
+//       position: absolute;
+//       width: auto;
+//       display: none;
+//       margin: 0;
+//       #{$default-float}: -$input-border-width;
+//       top: $custom-dropdown-offset-top;
+//       @if $experimental {
+//         -webkit-box-shadow: $custom-dropdown-shadow;
+//       }
+//       box-shadow: $custom-dropdown-shadow;
+//       margin: 0;
+//       padding: 0;
+//       background: $custom-dropdown-bg;
+//       border: $custom-dropdown-border-style $custom-dropdown-border-width $custom-dropdown-border-color;
+//       font-size: $em-base;
+
+//       li {
+//         color: $custom-dropdown-font-color;
+//         font-size: $custom-dropdown-font-size;
+//         cursor: $cursor-default-value;
+//         padding-top: $custom-dropdown-list-padding;
+//         padding-bottom: $custom-dropdown-list-padding;
+//         padding-#{$default-float}: $custom-dropdown-default-float-padding;
+//         padding-#{$opposite-direction}: $custom-dropdown-opposite-padding;
+//         min-height: $custom-dropdown-list-item-min-height;
+//         line-height: $custom-dropdown-list-item-min-height;
+//         margin: 0;
+//         white-space: nowrap;
+//         list-style: none;
+
+//         &.selected {
+//           background: $custom-dropdown-color-selected;
+//           color: $custom-dropdown-font-color-selected;
+//         }
+//         &:hover {
+//           background-color: darken($custom-dropdown-color-selected, 4%);
+//           color: $custom-dropdown-font-color-selected;
+//         }
+//         &.selected:hover {
+//           background: $custom-dropdown-color-selected;
+//           cursor: $cursor-default-value;
+//           color: $custom-dropdown-font-color-selected;
+//         }
+//       }
+
+//       &.show { display: block; }
+//     }
+
+//     /* Custom input, disabled */
+//     .custom.disabled { background: $custom-form-bg-disabled; }
+//   }
+// }
+
