@@ -9,12 +9,12 @@
 var grunt =			require('grunt');
 var glob =			require('glob');
 var matchdep =		require('matchdep');
-var minimatch =		require("minimatch");
+var minimatch =		require('minimatch');
 
 var config = {
-	pkg: grunt.file.readJSON('./package.json'),
-	project: grunt.file.readJSON('./project.json'),
-	cleanup: grunt.file.readJSON('./vendors.json')
+	pkg:		grunt.file.readJSON('./package.json'),
+	project:	grunt.file.readJSON('./_gas_project.json'),
+	vendors:	grunt.file.readJSON('./_gas_vendors.json')
 };
 
 // END GLOBAL OBJECTS
@@ -60,14 +60,14 @@ module.exports = function(grunt) {
 		'watch'
 	]);
 
-	grunt.registerTask('build', [
-		'sass:dist',
-		'bower:dist',
-		'autoprefixer:dist',
-		'cssmin:dist',
-		'clean:dist',
-		'jshint',
-		'uglify'
-	]);
+	// grunt.registerTask('build', [
+	// 	'sass:dist',
+	// 	'bower:dist',
+	// 	'autoprefixer:dist',
+	// 	'cssmin:dist',
+	// 	'clean:dist',
+	// 	'jshint',
+	// 	'uglify'
+	// ]);
 
 };

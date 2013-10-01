@@ -14,20 +14,20 @@ module.exports = {
 	* Imports all .js files and appends project banner
 	*/
 	concat: {
-		dev: {
-			files: {
-				'<%= project.dist.js %>/dist.js': [
-					// Inputs
-					'src/input1.js',
-					'src/input2.js'
-				]
-			}
-		},
-
 		options: {
 			stripBanners: true,
-			nonull: true,
 			banner: '<%= banner %>'
+		},
+
+		dist: {
+			// Files to concatenate #COMEBACK
+			src: [
+				'<%= project.src.js %>/*.js', 
+				'<%= project.src.js %>/**/*.js'
+			],
+
+			// Resulting JS file #COMEBACK
+			dest: '<%= distscripts %>/dist.js'
 		}
 	}
 

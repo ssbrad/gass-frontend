@@ -15,13 +15,10 @@
 
 	<?php include_once "devtools/_devtools.php"; ?>
 
-	<script src="./src/scripts/vendor/requirejs/require.js"></script>
+	<script data-main="./dist/scripts/app.dist" src="./dist/scripts/require.js"></script>
 
-	<script>
-		require(['./src/scripts/core'], function () {
-			require(['home']);
-		});
-	</script>
+
+
 
 </body>
 </html>

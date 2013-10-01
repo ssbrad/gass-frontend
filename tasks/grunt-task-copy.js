@@ -9,31 +9,35 @@
 var grunt =			require('grunt');
 var glob =			require('glob');
 var matchdep =		require('matchdep');
-var minimatch =		require("minimatch");
+var minimatch =		require('minimatch');
 
 var config = {
-	pkg: grunt.file.readJSON('./package.json'),
-	project: grunt.file.readJSON('./project.json'),
-	vendor: grunt.file.readJSON('./vendors.json')
+	pkg:		grunt.file.readJSON('./package.json'),
+	project:	grunt.file.readJSON('./_gas_project.json'),
+	vendors:	grunt.file.readJSON('./_gas_vendors.json')
 };
 
 // END GLOBAL OBJECTS
 
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
-copy: {
-		vendor: {
-			files: [
-				{
-					expand: true,
-					cwd: '<%= project.src.vendor %>',
-					src: [
-						'<%= vendor.js %>'
-					],
-					dest: '<%= project.src.js %>/vendor'
-				}
-			]
-		}
-	}
+	grunt.registerTask('copy:vendor-temp', [
+		'copy:temp_js',
+		'copy:temp_sass',
+		'copy:temp_css',
+		'copy:temp_img',
+		'copy:temp_fonts'
+	]);
+
+	grunt.registerTask('copy:vendor-src', [
+		'copy:js',
+		'copy:sass',
+		'copy:css',
+		'copy:img',
+		'copy:fonts'
+	]);
+
+
 
 };
+

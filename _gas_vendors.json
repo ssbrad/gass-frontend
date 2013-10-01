@@ -1,0 +1,7 @@
+{
+
+	"js": [
+		"<%= project.src.vendor %>/*.js",
+		"<%= project.src.vendor %>/**/*.js"
+	]
+}

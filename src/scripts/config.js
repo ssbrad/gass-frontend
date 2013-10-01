@@ -3,14 +3,16 @@ requirejs.config({
     paths: {
 
 		// FRAMEWORK BASE
+		jquery:			'libs/jquery.min',
         domReady:		'vendor/requirejs-domready/domReady',
         text:			'vendor/requirejs-text/text',
-        jquery:			'//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min',
         foundation:		'vendor/foundation/js/foundation/foundation',
+
 
         // FRAMEWORK PERFORMANCE
         debounce:		'vendor/jquery-smartresize/jquery.debouncedresize',
         throttled:		'vendor/jquery-smartresize/jquery.throttledresize',
+
 
         // FRAMEWORK UI
         jqueryeasing:	'vendor/jquery-easing/jquery.easing',
@@ -42,7 +44,7 @@ requirejs.config({
 			deps: ['jquery']
 		},
 		equalize: {
-			deps: ['jquery','debounce']
+			deps: ['jquery', 'debounce']
 		},
         picturefill: {
             deps: ['jquery']

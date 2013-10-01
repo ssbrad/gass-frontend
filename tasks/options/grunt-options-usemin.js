@@ -3,19 +3,18 @@ module.exports = {
 /*
 |--------------------------------------------------------------------------
 |
-| REQUIRE JS
-| <%=  %>
+| USEMIN
+|
 |--------------------------------------------------------------------------
 */
 
-	requirejs: {
-		compile: {
-			options: {
-				baseUrl: 'path/to/base',
-				mainConfigFile: 'path/to/config.js',
-				out: 'path/to/optimized.js'
-			}
-		}
-	}
+usemin: {
+html: ['**/*.html'],
+css: ['**/*.css'],
+options: {
+dirs: ['temp', 'dist']
+}
+}
 
 };
+

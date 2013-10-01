@@ -6,7 +6,7 @@
 |--------------------------------------------------------------------------
 */
 
-var optionsClean = require('../grunt-task-nobower');
+var optionsClean =			require('../grunt-task-nobower');
 
 // END GLOBAL OBJECTS
 

@@ -17,13 +17,40 @@
 		"website": "companysite.com"
 	},
 
-	"src":		{
-		"sass":			"src/sass",
-		"js":			"src/scripts/",
-		"img":			"src/images",
-		"fonts":		"src/sass/fonts",
-		"vendor":		"src/vendor"
+	"tpl":		{
+		"php":			"tpl/php",
+		"assets":		"tpl/assets",
+		"tags": 		"tpl/tags"
 	},
+
+	"src":		{
+		"vendor":		"src/vendor",
+
+		"sass":			"src/sass/vendor",
+		"js":			"src/scripts/vendor",
+		"img":			"src/images/vendor",
+		"fonts":		"src/sass/fonts/vendor"
+
+	},
+
+	"temp":		{
+		"vendor":		"src/temp_vendor",
+
+		"sass":			"src/temp_sass",
+		"css":			"src/temp_css",
+		"js":			"src/temp_js",
+		"img":			"src/temp_img",
+		"fonts":		"src/temp_fonts"
+
+	},
+
+	"dev":		{
+		"css":			"src/styles",
+		"js":			"src/scripts",
+		"img":			"src/images",
+		"fonts":		"src/styles/fonts"
+	},
+
 
 	"dist":		{
 		"css":			"dist/styles",
