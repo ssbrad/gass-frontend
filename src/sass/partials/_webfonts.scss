@@ -1,17 +1,28 @@
 
-@include fontface('crimson_roman','fonts/crimson-text-roman',normal);
-// @include fontface('crimson_italic','fonts/crimson-text-italic',normal);
-// @include fontface('crimson_semibold','fonts/crimson-text-semibold',normal);
-// @include fontface('crimson_semibolditalic','fonts/crimson-text-semibolditalic',normal);
-// @include fontface('crimson_bold','fonts/crimson-text-bold',normal);
-// @include fontface('crimson_bolditalic','fonts/crimson-text-bolditalic',normal);
+@include fontface('crimson_roman','webfonts/crimsontext/CrimsonText-Roman',normal);
+// @include fontface('crimson_italic','webfonts/crimsontext/CrimsonText-Italic',normal);
+@include fontface('crimson_semibold','webfonts/crimsontext/CrimsonText-Semibold',normal);
+// @include fontface('crimson_semibolditalic','webfonts/crimsontext/CrimsonText-SemiboldItalic',normal);
+// @include fontface('crimson_bold','webfonts/crimsontext/CrimsonText-Bold',normal);
+// @include fontface('crimson_bolditalic','webfonts/crimsontext/CrimsonText-BoldItalic',normal);
 
-// @include fontface('panefresco_1','fonts/panefresco-1wt-regular',normal);
-@include fontface('panefresco_250','fonts/panefresco-250wt-regular',normal);
-@include fontface('panefresco_400','fonts/panefresco-400wt-regular',normal);
-// @include fontface('panefresco_500','fonts/panefresco-500wt-regular',normal);
-// @include fontface('panefresco_600','fonts/panefresco-600wt-regular',normal);
-// @include fontface('panefresco_750','fonts/panefresco-750wt-regular',normal);
-// @include fontface('panefresco_800','fonts/panefresco-800wt-regular',normal);
-// @include fontface('panefresco_999','fonts/panefresco-999wt-regular',normal);
+
+// @include fontface('panefresco_1','webfonts/panefresco/Panefresco-1wt-Regular',normal);
+@include fontface('panefresco_250','webfonts/panefresco/Panefresco-250wt-Regular',normal);
+@include fontface('panefresco_400','webfonts/panefresco/Panefresco-400wt-Regular',normal);
+@include fontface('panefresco_500','webfonts/panefresco/Panefresco-500wt-Regular',normal);
+@include fontface('panefresco_600','webfonts/panefresco/Panefresco-600wt-Regular',normal);
+// @include fontface('panefresco_750','webfonts/panefresco/Panefresco-750wt-Regular',normal);
+// @include fontface('panefresco_800','webfonts/panefresco/Panefresco-800wt-Regular',normal);
+// @include fontface('panefresco_999','webfonts/panefresco/Panefresco-999wt-Regular',normal);
+
+
+// @include fontface('panefresco_1','webfonts/panefresco/Panefresco-1wt-Regular',normal);
+// @include fontface('panefresco_250','webfonts/panefresco/Panefresco-250wt-Regular',normal);
+// @include fontface('panefresco_400','webfonts/panefresco/Panefresco-400wt-Regular',normal);
+// @include fontface('panefresco_500','webfonts/panefresco/Panefresco-500wt-Regular',normal);
+// @include fontface('panefresco_600','webfonts/panefresco/Panefresco-600wt-Regular',normal);
+// @include fontface('panefresco_750','webfonts/panefresco/Panefresco-750wt-Regular',normal);
+// @include fontface('panefresco_800','webfonts/panefresco/Panefresco-800wt-Regular',normal);
+// @include fontface('panefresco_999','webfonts/panefresco/Panefresco-999wt-Regular',normal);
 

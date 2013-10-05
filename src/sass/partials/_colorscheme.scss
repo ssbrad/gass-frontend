@@ -1,0 +1,29 @@
+
+/*
+| BACKGROUND COLORS
+|-----------------------------------
+*/
+.bgw {
+	background-color: #fff;
+}
+
+.bgb {
+	background-color: #fff;
+}
+
+@include color_grades (bg1, $fill1);
+@include color_grades (bg2, $fill2);
+@include color_grades (bg3, $fill3);
+@include color_grades (bg4, $fill4);
+
+.tcw {
+	color: #fff;
+}
+
+.tcb {
+	color: #000;
+}
+
+.tc1 {
+	color: $color1;
+}

@@ -1,14 +1,13 @@
 {
 	"predef": [
-		"console",
-		"describe",
-		"it",
-		"after",
-		"afterEach",
-		"before",
-		"beforeEach"
+		"window",
+		"document",
+		"$",
+		"jQuery",
+		"requirejs"
 	],
 
+	"browser": true,
 	"indent": 4,
 	"node": true,
 	"devel": true,

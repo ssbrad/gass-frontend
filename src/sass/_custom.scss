@@ -69,9 +69,9 @@ $experimental: true !default;
 
 $default-float: left !default;
 
-$body-bg: #fff !default;
-$body-font-color: #222 !default;
-$body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !default;
+$body-bg: #dadad2;
+$body-font-color: lighten($color2, 15%);
+$body-font-family: $font;
 $body-font-weight: normal !default;
 $body-font-style: normal !default;
 
@@ -85,8 +85,8 @@ $text-direction: ltr !default;
 
 // Colors
 
-$primary-color: lighten($color1, 20%) !default;
-$secondary-color: #e9e9e9 !default;
+$primary-color: $color1;
+$secondary-color: $color2;
 $alert-color: #c60f13 !default;
 $success-color: #5da423 !default;
 
@@ -178,10 +178,10 @@ $block-grid-media-queries: true !default;
 
 // Control header font styles
 
-$header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !default;
+$header-font-family: $font;
 $header-font-weight: normal !default;
 $header-font-style: normal !default;
-$header-font-color: #222 !default;
+$header-font-color: $color2;
 $header-line-height: 1.4 !default;
 $header-top-margin: .2em !default;
 $header-bottom-margin: .5em !default;
@@ -211,7 +211,7 @@ $small-font-color: lighten($header-font-color, 30%) !default;
 
 // Style paragraphs
 
-$paragraph-font-family: inherit !default;
+$paragraph-font-family: $font;
 $paragraph-font-weight: normal !default;
 $paragraph-font-size: 1em !default;
 $paragraph-line-height: 1.6 !default;
@@ -1308,9 +1308,9 @@ $topbar-dropdown-label-bg: lighten($topbar-bg-color, 5%) !default;
 
 $topbar-menu-link-transform: uppercase !default;
 $topbar-menu-link-font-size: em-calc(13) !default;
-$topbar-menu-link-weight: bold !default;
-$topbar-menu-link-color: #fff !default;
-$topbar-menu-icon-color: #fff !default;
+$topbar-menu-link-weight: normal;
+$topbar-menu-link-color: $color1;
+$topbar-menu-icon-color: $color1;
 $topbar-menu-link-color-toggled: #888 !default;
 $topbar-menu-icon-color-toggled: #888 !default;
 

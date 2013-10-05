@@ -1,0 +1,135 @@
+// $slider_height_min: 324px;
+// $slider_height_sm: 539px;
+// $slider_height_med: 607px;
+// $slider_height_lg: 809px;
+
+// $subcont_margintop_min: 324px;
+// $subcont_margintop_sm: 539px;
+// $subcont_margintop_med: 607px;
+// $subcont_margintop_lg: 700px;
+
+$subhero_margintop_min: -75px;
+$subhero_margintop_sm: -125px;
+$subhero_margintop_med: -175px;
+$subhero_margintop_lg: -250px;
+
+$content_padding_min: em-calc(12);
+$content_padding_sm: em-calc(30);
+$content_padding_med: em-calc(40);
+$content_padding_lg: em-calc(45);
+
+
+//|------------------------------------------------------------------------------------------------------------------------------
+//| Containers
+//|------------------------------------------------------------------------------------------------------------------------------
+
+body {
+	background-color: $body_color;
+	color: lighten($color2, 15%);
+}
+
+.container {
+	position: relative;
+	&.herocontainer {
+		position: absolute;
+		width: 100%;
+		display: block;
+	}
+
+	&.subcont {
+		@include single_media(margin-top, 250px, 375px, 450px, 475px);
+	}
+
+// $subcont_margintop_min: 324px;
+// $subcont_margintop_sm: 539px;
+// $subcont_margintop_med: 607px;
+// $subcont_margintop_lg: 700px;
+
+	&.content, &.subcont {
+		padding-left: $content_padding_min;
+		padding-right: $content_padding_min;
+
+		@media #{$screen} {
+			padding-left: $content_padding_min;
+			padding-right: $content_padding_min;
+		};
+		@media #{$small}  {
+			padding-left: $content_padding_sm;
+			padding-right: $content_padding_sm;
+		};
+		@media #{$medium} {
+			padding-left: $content_padding_med;
+			padding-right: $content_padding_med;
+		};
+		@media #{$large}  {
+			padding-left: $content_padding_lg;
+			padding-right: $content_padding_lg;
+		};
+	}
+
+	&.content {
+		padding-bottom: 60px;
+	}
+
+	&.footer {
+
+	}
+}
+
+
+
+//|------------------------------------------------------------------------------------------------------------------------------
+//| WRAPS
+//|------------------------------------------------------------------------------------------------------------------------------
+
+
+.wrap {
+
+	display: block;
+	position: relative;
+
+	&.slider {
+		width: 100%;
+		overflow: hidden;
+	}
+
+	&.hero {
+		position: absolute;
+		width: 100%;
+		min-height: 250px;
+		text-align: left;
+		@include single_media(top, 60px, 75px, 75px, 90px);
+	}
+
+	&.action {
+		.pane-top {
+			border-top: 1px solid lighten($color2, 40%);
+			border-left: 1px solid lighten($color2, 40%);
+			border-right: 1px solid lighten($color2, 40%);
+		}
+
+		.pane-bottom {
+			border-left: 1px solid lighten($color2, 40%);
+			border-right: 1px solid lighten($color2, 40%);
+		}
+	}
+
+	&.testimonials {
+		.pane {
+			border: 1px solid lighten($color2, 40%);
+		}
+	}
+	&.subhero {
+		.slidecontrols {
+			border-top: 1px solid darken($color1, 7%);
+			border-left: 1px solid darken($color1, 7%);
+			border-right: 1px solid darken($color1, 7%);
+		}
+
+		.callblocks {
+			border-left: 1px solid darken($color1, 7%);
+			border-right: 1px solid darken($color1, 7%);
+		}
+	}
+
+}

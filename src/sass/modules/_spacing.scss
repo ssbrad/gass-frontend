@@ -1,0 +1,15 @@
+@mixin spacer ($classprefix, $property, $base_value: 0){
+
+    .#{$classprefix} {
+        #{$property}: $base_value;
+
+        $p: 0;
+		@for $i from 1 through 19 {
+			$p: $p + 5;
+
+			&.m#{$p} {
+				#{$property}: em-calc($base_value + $p);
+			}
+		}
+	}
+}

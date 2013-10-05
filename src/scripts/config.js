@@ -7,6 +7,7 @@ requirejs.config({
         domReady:		'vendor/requirejs-domready/domReady',
         text:			'vendor/requirejs-text/text',
         foundation:		'vendor/foundation/js/foundation/foundation',
+        topbar:			'vendor/foundation/js/foundation/foundation.topbar',
 
 
         // FRAMEWORK PERFORMANCE
@@ -20,13 +21,17 @@ requirejs.config({
         caroufredsel:	'vendor/caroufredsel/jquery.carouFredSel-6.2.1',
         equalize:		'vendor/equalize/js/equalize',
         picturefill:	'vendor/picturefill/picturefill',
-        stickykit:		'vendor/sticky-kit/jquery.sticky-kit'
+        stickykit:		'vendor/sticky-kit/jquery.sticky-kit',
+        midway:			'vendor/midway-js/midway'
 
     },
 
     shim: {
         foundation: {
             deps: ['jquery']
+        },
+        topbar: {
+            deps: ['foundation']
         },
         debounce: {
             deps: ['jquery']
@@ -44,12 +49,15 @@ requirejs.config({
 			deps: ['jquery']
 		},
 		equalize: {
-			deps: ['jquery', 'debounce']
+			deps: ['jquery']
 		},
         picturefill: {
             deps: ['jquery']
         },
         stickykit: {
+			deps: ['jquery']
+		},
+        midway: {
 			deps: ['jquery']
 		}
 
@@ -60,12 +68,10 @@ requirejs.config({
 requirejs([
 	'jquery',
 	'domReady',
-	'foundation'
+	'foundation',
+	'topbar'
 ],	function ($, domReady) {
 
-		domReady(function () {
-			$(document).foundation();
-		});
 
 	}
 );

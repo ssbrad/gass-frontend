@@ -75,3 +75,5 @@
 "jquery-timeago": "*",
 "jquery-touchswipe": "*",
 " jquery-easing": "*",
+
+"midway-js": "https://github.com/brandonjacoby/Midway.js.git",

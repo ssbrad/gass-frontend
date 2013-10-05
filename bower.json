@@ -21,6 +21,7 @@
 
 
 		"caroufredsel": "http://gashouse.com/repo/carouFredSel.zip",
+		"midway-js": "https://github.com/brandonjacoby/Midway.js.git",
 		"picturefill": "*",
 		"jquery-backstretch": "*",
 		"imagesloaded": "*",

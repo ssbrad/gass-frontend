@@ -1,0 +1,13 @@
+
+.devfooter {
+	width: 100px;
+	height: 300px;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	background: #1e1e1e;
+	padding: 20px;
+	color: #fff;
+	@include opacity(0.3);
+	z-index: 9999;
+}

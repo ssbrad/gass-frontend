@@ -15,14 +15,14 @@ $button-display: inline-block;
 $button-margin-bottom: em-calc(20);
 
 // We use these to control button text styles.
-$button-font-family: inherit;
+$button-font-family: $font;
 $button-font-color: #fff;
 $button-font-color-alt: #333;
 $button-font-med: em-calc(16);
 $button-font-tny: em-calc(11);
 $button-font-sml: em-calc(13);
 $button-font-lrg: em-calc(20);
-$button-font-weight: bold;
+$button-font-weight: 400;
 $button-font-align: center;
 
 // We use these to control various hover effects.
@@ -133,6 +133,35 @@ $split-button-pip-default-float-lrg: em-calc(-9);
 /*-------------------------------------------------------|  DO NO MOVE  |-------------------------------------------------------*/
 
 
+.btn {
+
+	@include button-base;
+	@include button-size;
+
+	background-color: darken($fill2, 10%);
+	border: 1px solid darken($fill2, 15%);
+	@include box-shadow (0 2px darken($fill2, 20%));
+
+	color: #fff;
+	font-family: $font;
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	@include single-transition(all, 0.3s, ease-in-out);
+	@include single-transition(color, 0.1s, ease);
+}
+
+.nicebtn {
+	width: 100%;
+	border-top: 1px solid $color2;
+	text-align: center;
+	margin-top: em-calc(60);
+
+	.btn {
+		position: relative;
+		top: -26px;
+	}
+}
 
 
 //|------------------------------------------------------------------------------------------------------------------------------

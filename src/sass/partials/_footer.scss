@@ -1,0 +1,15 @@
+.footer {
+	h2, a, p {
+		color: lighten($color2, 25%);
+	}
+
+	#{headings(1,6)}{
+		color: lighten($color2, 45%);
+	}
+
+	.footerhighlights {
+		#{headings(1,6)}, a, p {
+			color: #fff;
+		}
+	}
+}

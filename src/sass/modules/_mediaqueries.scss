@@ -1,0 +1,8 @@
+@mixin single_media ($property, $min_value, $sm_value, $med_value, $lg_value) {
+
+	@media #{$screen} { #{$property}: $min_value; };
+	@media #{$small}  { #{$property}: $sm_value; };
+	@media #{$medium} { #{$property}: $med_value; };
+	@media #{$large}  { #{$property}: $lg_value; };
+
+}
